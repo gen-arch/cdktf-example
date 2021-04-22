@@ -32,9 +32,9 @@ class MyStack extends TerraformStack {
       project: project,
     })
 
-    services.forEach(api => {
-      new ProjectService(this, `${api}-service`, {
-        service: api
+    services.forEach(service => {
+      new ProjectService(this, service, {
+        service: service
       })
     });
     
